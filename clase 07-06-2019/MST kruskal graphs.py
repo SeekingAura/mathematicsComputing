@@ -39,8 +39,7 @@ def generate_random_graph_for_MST(n):
 				neighborsList=nx.neighbors(G,nodeI)
 				while True:
 					nodeJ=list(G.nodes())[random.randint(0,n-1)]
-					if(nodeI!=nodeJ and not(nodeJ in neighborsList)
-					):
+					if(nodeI!=nodeJ and not(nodeJ in neighborsList)):
 						break
 				G.add_weighted_edges_from([[nodeI, nodeJ, round(random.uniform(1, n), 2)]])
 

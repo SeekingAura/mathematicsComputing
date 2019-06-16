@@ -92,14 +92,7 @@ if __name__=="__main__":
 	spring_layout(G[, k, pos, fixed, …])	Position nodes using Fruchterman-Reingold force-directed algorithm.
 	spectral_layout(G[, weight, scale, center, dim])	Position nodes using the eigenvectors of the graph Laplacian.
 	"""
-	# pos=nx.bipartite_layout(G.nodes(), G)
 	pos=nx.circular_layout(G)
-	# pos=nx.kamada_kawai_layout(G)
-	# pos=nx.planar_layout(G)
-	# pos=nx.random_layout(G)
-	# pos=nx.shell_layout(G)
-	# pos=nx.spring_layout(G)
-	# pos=nx.spectral_layout(G)
 
 	# get atributes
 	edge_labels = nx.get_edge_attributes(G,'label')
