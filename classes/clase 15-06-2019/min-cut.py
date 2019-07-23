@@ -70,8 +70,13 @@ def custom_graph():
 	return G
 # El arco a "comprimir" siempre es aleatorio hasta que haya 1 solo arco en el grafo
 def min_cut(G):
-	while nx.number_of_edges(G)>1:
-		toReduce=list(G.edges())[random.randint(0, nx.number_of_edges(G))-1]
+	#while nx.number_of_edges(G)>1:
+	toReduceNode=list(G.edges())[random.randint(0, nx.number_of_edges(G))-1]
+	# G.nodes[toReduce]
+	for nodeFrom, nodeto in nx.neighbors(toReduceNode):
+
+
+
 		
 
 

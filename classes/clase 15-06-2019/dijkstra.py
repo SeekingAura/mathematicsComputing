@@ -41,12 +41,10 @@ def generate_random_gnp(n):
 			
 	return G
 	
-def draw_states(G, graphNumber, pos):
+def draw_graph_states(G, graphNumber, pos):
 	# create and connect to draw figure
 	plt.figure(graphNumber, constrained_layout=True)
-	#fig, ax = plt.subplots(graphNumber, constrained_layout=True)
 	plt.title("Dijkstra Parte {}".format(graphNumber), fontsize=16)
-	#fig.suptitle("Dijkstra Parte {}".format(graphNumber), fontsize=16)
 
 	# get atributes
 	edge_labels = nx.get_edge_attributes(G,'weight')
@@ -84,7 +82,7 @@ def dijkstra(G, pos=None, startNode=None):
 
 	# draw first time
 	stateNumber=0
-	draw_states(G, stateNumber, pos)
+	draw_graph_states(G, stateNumber, pos)
 	stateNumber+=1
 
 	# a starter node
@@ -97,7 +95,7 @@ def dijkstra(G, pos=None, startNode=None):
 		connectedNodes.append(startNode)
 
 	# Draw after first random node
-	draw_states(G, stateNumber, pos)
+	draw_graph_states(G, stateNumber, pos)
 	stateNumber+=1
 
 	while len(connectedNodes)<n:
@@ -129,7 +127,7 @@ def dijkstra(G, pos=None, startNode=None):
 			):
 				G.edges[nodeFrom, nodeToI]["color"]=discardEdgeColor
 
-		draw_states(G, stateNumber, pos)
+		draw_graph_states(G, stateNumber, pos)
 		stateNumber+=1
 	return G, totalWeigth, pathsResult
 

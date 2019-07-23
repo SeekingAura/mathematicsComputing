@@ -52,3 +52,6 @@ Problema: en un grafo dado, encontrar un corte con el número mínimo de arcos q
 
 # Contracción de grafos - MinCutRep
 Para que el algoritmo suelte una buena respuesta se dice que con repetirlo n(n-1) donde n es la cantidad de arcos que tien eel grafo, guardando la mejor solución, de esta manera la probabildiad de que la repsuesta sea la correcta es el 86%, entre menor sea mejor es la solución
+
+# algoritmo diamante
+Determina los caminos mas cortos con sumas de las matrices en la operación de multiplicación donde la suma trata de obtener

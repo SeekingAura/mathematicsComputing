@@ -20,23 +20,6 @@ colorNonConecctedEdge="silver"
 #def topological_solution(G):
 #	for 
 
-def graph_states(G, graphNumber, pos):
-	fig=plt.figure(graphNumber)
-	fig.suptitle("Topologico Parte {}".format(graphNumber), fontsize=16)
-
-	# pos=nx.spring_layout(G)
-	# get atributes
-	edge_labels = nx.get_edge_attributes(G,'weight')
-	node_colors=nx.get_node_attributes(G,'color')
-	edge_colors=nx.get_edge_attributes(G,'color')
-
-	nx.draw(G, pos, edge_color=edge_colors.values(), node_color=node_colors.values(),
-		with_labels=True, font_weight='bold'
-	)
-	nx.draw_networkx_edge_labels(G, pos, edge_labels=edge_labels, with_labels=True, 
-		font_weight='bold'
-	)
-
 def generate_random_gnp(n):
 	if(n<1):
 		return None
@@ -87,6 +70,22 @@ def generateCustomGraph():
 	return G
 
 
+def draw_graph_states(G, graphNumber, pos):
+	plt.figure(graphNumber)
+	plt.title("Topologico Parte {}".format(graphNumber), fontsize=16)
+
+	# pos=nx.spring_layout(G)
+	# get atributes
+	edge_labels = nx.get_edge_attributes(G,'weight')
+	node_colors=nx.get_node_attributes(G,'color')
+	edge_colors=nx.get_edge_attributes(G,'color')
+
+	nx.draw(G, pos, edge_color=edge_colors.values(), node_color=node_colors.values(),
+		with_labels=True, font_weight='bold'
+	)
+	nx.draw_networkx_edge_labels(G, pos, edge_labels=edge_labels, with_labels=True, 
+		font_weight='bold'
+	)
 
 def setTopologicalADG(G):
 	#nx.DiGraph(G)# topological graph
@@ -110,7 +109,7 @@ def setTopologicalADG(G):
 	# get equivalent
 	posUpdate={labelsEquival.get(posEQ):pos.get(posEQ) for posEQ in pos}
 	# Graph first state
-	graph_states(G, labelNodes, posUpdate)
+	draw_graph_states(G, labelNodes, posUpdate)
 	labelNodes+=1
 
 	while numberOfNodes>=labelNodes:
@@ -132,7 +131,7 @@ def setTopologicalADG(G):
 
 
 			posUpdate={labelsEquival.get(posEQ):pos.get(posEQ) for posEQ in pos}
-			graph_states(G, labelNodes, posUpdate)
+			draw_graph_states(G, labelNodes, posUpdate)
 			
 			labelNodes+=1
 

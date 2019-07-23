@@ -81,5 +81,6 @@ al efectuar A^(k+1)=A^k*A
 d_ij=c_i1*a_1j+c_i2*a2_j+c_i3*a_3j+ ... + c_in*a_nj
 
 Tarea 1.  
-Lema 1.2.6  
-Lema 1.2.7
+Lema 1.2.6  -> A connected graph on n vertices has at least n − 1 edges.
+
+Lema 1.2.7 -> An acyclic graph on n vertices has at most n − 1 edges
