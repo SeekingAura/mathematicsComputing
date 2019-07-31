@@ -12,12 +12,10 @@ The algorithms and some definitions are developed in programing languague [Pytho
 # Content
 Here a links of content of this README, the README have information about installation guide and resume of topics in the *Matemathics computing course
 .
-* [Concepts](#Concepts)
+* [Basic Concepts](#Basic-Concepts)
     * [Graph](#Graph)
     * [Node](#Node)
     * [Edge](#Edge)
-    * [Properties](#Properties)
-        * [Number of Edges](#Number-of-Edges)
 * [Install - Windows](#Install---Windows)
     * [Pre-requisites](#Pre-requisites)
         * [Install Pre-requisites](#Install-Pre-requisites)
@@ -31,7 +29,9 @@ Here a links of content of this README, the README have information about instal
     * [Edges](#Edges)
 
 
-# Concepts
+# Basic Concepts
+Concepts about main structure of graphs, this is required for algorithms, development and all about graph theory.
+
 ## Graph
 A graph is a pair of sets N and E, where N is a set of Nodes and E is a set of Edges, graphs have several applications, exist different kind of graphs such as simple, multi-graph, undirected, directed, this depend about the "system" or model to represent.
 
@@ -40,11 +40,6 @@ In a Graph node is a area point where can interconnect multiple elements in the 
 
 ## Edge
 In a Graph node is the way, relation, connection that have a node with other node exist some kinds of edges such as directed, undirected, weighted, non weighted and more.
-
-## Properties
-
-### Number of Edges
-The maximun number of edges in a graph is *2^(n)* where n is number of nodes
 
 # Install - Windows
 The source codes are implemented in *python languague* the version of python is 3.7.3 but also works with others versions of python 3 (the minimal requeriments is about the python modules to install), some modules require an aditional configuration foe example PyGraphiz also works with well with unofficial python modules.
@@ -91,14 +86,15 @@ pip install matplotlib
 Also can follow the [Offical installation guide](https://matplotlib.org/users/installing.html) and go to instalation guide of **matplotlib**
 
 #### PyGraphviz
-This module provide tools for drawing with GraphViz, is usefull about format and position of nodes specially in certain trees, remember that require alredy installed [Graphviz](http://graphviz.org/) in your system is probably to offical instalation in windows makes error, so i recomend to use a unofficial binarie of CristiFati can download [here](https://github.com/CristiFati/Prebuilt-Binaries/tree/master/Windows/PyGraphviz), when already download to install with pip use the next command:
+This module provide tools for drawing with GraphViz, is usefull about format and position of nodes specially in certain trees, remember that require alredy installed [Graphviz](http://graphviz.org/) in your system. For install python module can install with pip (official python version) but is probably in windows make a error, so i recomend to use a unofficial binarie of *CristiFati* can download [here](https://github.com/CristiFati/Prebuilt-Binaries/tree/master/Windows/PyGraphviz), when already download to install with pip use the next command:
 ```bat
 pip install pygraphviz-1.5-cp37-cp37m-win_amd64.whl
 ```
 
-Make sure so the file are in the folder after to execution (probably require a path of Graphviz such as *C:\Program Files (x86)\Graphviz2.38\bin*)
+Make sure so the file are in the folder after to execution (probably require a path of Graphviz such as *C:\Program Files (x86)\Graphviz2.38\bin*), is **your responsability** use this unnoficial python module.
 
 # Data structure in networkx (representation)
+Based on concept of graphs, nodes and edges on programing can make a data structure for graph representation, here the implementations are in python languague and use module Networkx for that reason the estructure is the most appropriate for the module.
 
 ## Nodes
 The module networkx work with diferents data structure of python but the most simply usage is with lists, in the case of nodes the representation is a list where each element is a sub-list this sub-lists have node identifier and set initial features, the structure of *nodesList* in python follow the next code:
