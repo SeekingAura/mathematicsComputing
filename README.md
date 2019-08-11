@@ -124,3 +124,4 @@ edgesList=[
 The first element of each sub-list is a node where edge starts, second element of each sub-list is a node where edge ends and the third element of each sub-list is features of edge this is used for manage a custom drawing (color, position) and can use features such as values in edge weight, capacity and more (can have 1, all or 0 features).
 
 # Topics and algorithms
+* [Getting started](/Getting&#32;started&#32;with&#32;graphs)
